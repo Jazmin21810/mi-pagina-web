@@ -5,22 +5,23 @@
   <title>Somos Siempre A Tu Lado</title>
   <style>
     :root {
-      --rosa-cuerpo: #fff4fa; /* rosa claro para el cuerpo */
+      --rosa-cuerpo: #fff4fa;
       --rosa-2: #fad1e6;
       --rosa-3: #f8bbd0;
       --rosa-4: #f48fb1;
       --rosa-5: #e1bee7;
       --rosa-6: #fce4ec;
       --negro: #000;
-      --gris: #333; /* gris oscuro para textos */
+      --gris: #333;
       --blanco: #fff;
     }
     body {
       font-family: 'Times New Roman', Times, serif;
-      background: var(--blanco);
+      background: url('https://www.google.com/url?sa=i&url=http%3A%2F%2F880noticias.info%2Fmagazine%2Fmascotas%2Fel-puente-del-arcoiris-la-autora-del-poema-sobre-el-paraiso-de-las-mascotas%2F&psig=AOvVaw0gdurxiGwufMRq1kB-sfla&ust=1757904529159000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPCAreye148DFQAAAAAdAAAAABAE') center center / cover no-repeat fixed;
       color: var(--gris);
       margin: 0;
       padding: 20px;
+      min-height: 100vh;
     }
     .cuerpo {
       background: var(--rosa-cuerpo);
@@ -29,6 +30,9 @@
       max-width: 900px;
       padding: 32px 18px;
       box-shadow: 0 4px 32px rgba(248,187,208,0.13);
+      /* Fondo semitransparente para mejor lectura sobre la imagen */
+      backdrop-filter: blur(1px);
+      /* Puedes ajustar el blur si lo deseas más marcado */
     }
     nav {
       background: var(--rosa-6);
