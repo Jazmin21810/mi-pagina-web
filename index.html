@@ -5,24 +5,32 @@
   <title>Cremaciones de Mascotas</title>
   <style>
     :root {
-      --rosa-casi-blanco: #fff7fa;
-      --rosa-1: #fff4fa;
+      --rosa-cuerpo: #fff4fa; /* rosa claro para el cuerpo */
       --rosa-2: #fad1e6;
       --rosa-3: #f8bbd0;
       --rosa-4: #f48fb1;
       --rosa-5: #e1bee7;
       --rosa-6: #fce4ec;
       --negro: #000;
+      --blanco: #fff;
     }
     body {
       font-family: 'Times New Roman', Times, serif;
-      background: var(--rosa-casi-blanco);
+      background: var(--blanco);
       color: var(--negro);
       margin: 0;
       padding: 20px;
     }
+    .cuerpo {
+      background: var(--rosa-cuerpo);
+      border-radius: 22px;
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 32px 18px;
+      box-shadow: 0 4px 32px rgba(248,187,208,0.13);
+    }
     nav {
-      background: var(--rosa-1);
+      background: var(--rosa-6);
       padding: 14px 24px;
       margin-bottom: 28px;
       border-radius: 12px;
@@ -89,7 +97,7 @@
       max-width: 400px;
       width: 100%;
       border: 4px solid var(--rosa-5);
-      background: var(--rosa-1);
+      background: var(--rosa-6);
     }
     .galeria {
       display: flex;
@@ -111,7 +119,7 @@
       transform: scale(1.08);
       box-shadow: 0 8px 28px rgba(250,209,230,0.21);
       border-color: var(--rosa-4);
-      background: var(--rosa-1);
+      background: var(--rosa-6);
     }
     .botones {
       display: flex;
@@ -199,6 +207,9 @@
       font-family: 'Times New Roman', Times, serif;
     }
     @media (max-width: 600px) {
+      .cuerpo {
+        padding: 12px 2vw;
+      }
       .galeria {
         flex-direction: column;
         align-items: center;
@@ -236,63 +247,65 @@
     <a href="#ubicacion">Ubicación</a>
   </nav>
 
-  <div class="box fade-in">
-    <h1>Bienvenido a Cremaciones de Mascotas</h1>
-    <img src="mascota.jpg" alt="Mascota">
-    <p>Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
-    <div class="botones">
-      <a class="boton" href="#servicios">Ver Servicios</a>
-      <a class="boton" href="#contacto">Solicitar Información</a>
-      <a class="boton" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+  <div class="cuerpo">
+    <div class="box fade-in">
+      <h1>Bienvenido a Cremaciones de Mascotas</h1>
+      <img src="mascota.jpg" alt="Mascota">
+      <p>Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
+      <div class="botones">
+        <a class="boton" href="#servicios">Ver Servicios</a>
+        <a class="boton" href="#contacto">Solicitar Información</a>
+        <a class="boton" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Sección de Servicios -->
-  <div class="box fade-in">
-    <h2 id="servicios">Nuestros Servicios</h2>
-    <ul>
-      <li>Atención personalizada</li>
-      <li>Servicio rápido y confiable</li>
-      <li>Opciones de urnas y recuerdos</li>
-      <li>Asesoría durante todo el proceso</li>
-    </ul>
-  </div>
-
-  <!-- Sección Galería -->
-  <div class="box fade-in">
-    <h2 id="galeria">Galería de Mascotas</h2>
-    <div class="galeria">
-      <img src="mascota.jpg" alt="Mascota 1">
-      <img src="mascota2.jpg" alt="Mascota 2">
-      <img src="mascota3.jpg" alt="Mascota 3">
-      <!-- Agrega más imágenes aquí -->
+    <!-- Sección de Servicios -->
+    <div class="box fade-in">
+      <h2 id="servicios">Nuestros Servicios</h2>
+      <ul>
+        <li>Atención personalizada</li>
+        <li>Servicio rápido y confiable</li>
+        <li>Opciones de urnas y recuerdos</li>
+        <li>Asesoría durante todo el proceso</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- Sección de Ubicación -->
-  <div class="box fade-in">
-    <h2 id="ubicacion">Ubicación</h2>
-    <p>Estamos ubicados en [tu dirección aquí].</p>
-  </div>
+    <!-- Sección Galería -->
+    <div class="box fade-in">
+      <h2 id="galeria">Galería de Mascotas</h2>
+      <div class="galeria">
+        <img src="mascota.jpg" alt="Mascota 1">
+        <img src="mascota2.jpg" alt="Mascota 2">
+        <img src="mascota3.jpg" alt="Mascota 3">
+        <!-- Agrega más imágenes aquí -->
+      </div>
+    </div>
 
-  <!-- Sección de Contacto y Formulario WhatsApp -->
-  <div class="box fade-in">
-    <h2 id="contacto">Contacto</h2>
-    <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
+    <!-- Sección de Ubicación -->
+    <div class="box fade-in">
+      <h2 id="ubicacion">Ubicación</h2>
+      <p>Estamos ubicados en [tu dirección aquí].</p>
+    </div>
 
-    <h2 id="formulario">Formulario de Contacto</h2>
-    <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
-      <label>Nombre:<br>
-        <input type="text" id="nombre" required placeholder="Tu nombre">
-      </label>
-      <label>Email:<br>
-        <input type="email" id="email" required placeholder="Tu correo">
-      </label>
-      <label>Mensaje:<br>
-        <textarea id="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
-      </label>
-      <button type="submit" class="boton">Enviar por WhatsApp</button>
-    </form>
+    <!-- Sección de Contacto y Formulario WhatsApp -->
+    <div class="box fade-in">
+      <h2 id="contacto">Contacto</h2>
+      <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
+
+      <h2 id="formulario">Formulario de Contacto</h2>
+      <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
+        <label>Nombre:<br>
+          <input type="text" id="nombre" required placeholder="Tu nombre">
+        </label>
+        <label>Email:<br>
+          <input type="email" id="email" required placeholder="Tu correo">
+        </label>
+        <label>Mensaje:<br>
+          <textarea id="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
+        </label>
+        <button type="submit" class="boton">Enviar por WhatsApp</button>
+      </form>
+    </div>
   </div>
 
   <script>
