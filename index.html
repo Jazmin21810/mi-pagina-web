@@ -28,15 +28,14 @@
       min-height: 100vh;
     }
     .cuerpo {
-       background-image: url('https://i0.wp.com/planetamascotaperu.com/wp-content/uploads/2023/03/Rainbow-Bridge.jpg?w=780&ssl=1'));
+      /* Puedes mantener el fondo color si quieres más legibilidad */
+      background: var(--rosa-cuerpo);
       border-radius: 22px;
       margin: 0 auto;
       max-width: 900px;
       padding: 32px 18px;
       box-shadow: 0 4px 32px rgba(248,187,208,0.13);
       backdrop-filter: blur(1px);
-      /* Puedes ajustar el blur si lo deseas más marcado */
-      /* También puedes agregar opacidad usando: background: rgba(255,244,250,0.93); */
     }
     nav {
       background: var(--rosa-6);
@@ -101,16 +100,21 @@
       margin-top: 7px;
       border-radius: 2px;
     }
-    img {
+    /* Mejor resolución para imágenes generales */
+    img, .galeria img {
       display: block;
       margin: 22px auto;
       border-radius: 16px;
       box-shadow: 0 2px 16px rgba(250,209,230,0.22);
-      max-width: 400px;
       width: 100%;
+      max-width: 700px;
+      height: auto;
       border: 4px solid var(--rosa-5);
       background: var(--rosa-6);
+      object-fit: cover;
+      image-rendering: auto;
     }
+    /* Galería de imágenes: más grandes y nítidas */
     .galeria {
       display: flex;
       gap: 24px;
@@ -118,12 +122,14 @@
       justify-content: center;
     }
     .galeria img {
+      max-width: 320px;
+      min-width: 220px;
+      height: 220px;
+      object-fit: cover;
       border-radius: 16px;
       box-shadow: 0 2px 14px rgba(250,209,230,0.13);
       margin: 10px;
       transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-      max-width: 180px;
-      width: 100%;
       border: 3px solid var(--rosa-3);
       background: var(--rosa-2);
     }
@@ -218,6 +224,15 @@
       opacity: 0.9;
       font-family: 'Times New Roman', Times, serif;
     }
+    @media (max-width: 900px) {
+      .galeria img {
+        max-width: 99vw;
+        height: 180px;
+      }
+      img {
+        max-width: 99vw;
+      }
+    }
     @media (max-width: 600px) {
       .cuerpo {
         padding: 12px 2vw;
@@ -232,6 +247,9 @@
       }
       ul, p, form {
         max-width: 98vw;
+      }
+      .galeria img {
+        height: 140px;
       }
     }
     ::selection {
@@ -255,14 +273,14 @@
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
     <a href="#ubicacion">Ubicación</a>
   </nav>
 
   <div class="cuerpo">
     <div class="box fade-in">
       <h1 class="titulo-cursiva">Somos Siempre A Tu Lado</h1>
-      <img src="Tarjeta de presentación estudio.png" alt=Tarjeta de presentación estudio.png; max-height=600px;max-width=600px>
+      <img src="Tarjeta de presentación estudio.png" alt="Tarjeta de presentación estudio" width="700" height="auto" loading="lazy">
       <p> Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
       <p> "Sé que no es un adiós para siempre porque estarás eternamente en nuestros corazones".</p>
       <div class="botones">
@@ -287,9 +305,9 @@
     <div class="box fade-in">
       <h2 id="galeria">Galería de Mascotas</h2>
       <div class="galeria">
-        <img src="mascota.jpg" alt="Mascota 1">
-        <img src="mascota2.jpg" alt="Mascota 2">
-        <img src="mascota3.jpg" alt="Mascota 3">
+        <img src="mascota.jpg" alt="Mascota 1" width="320" height="220" loading="lazy">
+        <img src="mascota2.jpg" alt="Mascota 2" width="320" height="220" loading="lazy">
+        <img src="mascota3.jpg" alt="Mascota 3" width="320" height="220" loading="lazy">
         <!-- Agrega más imágenes aquí -->
       </div>
     </div>
@@ -322,9 +340,10 @@
     function enviarWhatsApp(event) {
       event.preventDefault();
       var nombre = document.getElementById('nombre').value;
+      var telefono = document.getElementById('teléfono').value;
       var mensaje = document.getElementById('mensaje').value;
-      var numero = '549113658497''; 
-      var texto = `Hola, soy ${nombre}. ${mensaje}`;
+      var numero = '5491136584970';
+      var texto = `Hola, soy ${nombre}, mi teléfono es ${telefono}. ${mensaje}`;
       var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
     }
