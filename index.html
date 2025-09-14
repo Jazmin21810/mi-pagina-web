@@ -5,7 +5,7 @@
   <title>Siempre A Tu Lado: Cremaciones de Mascotas</title>
   <style>
     body {
-      font-family: Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f6f6f6;
       color: #333;
       margin: 0;
@@ -30,9 +30,39 @@
     nav a:hover {
       background: #003d66;
     }
+    .box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      padding: 25px;
+      margin-bottom: 30px;
+    }
     h1 {
       color: #00518c;
       margin-bottom: 10px;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    h2 {
+      position: relative;
+      color: #00518c;
+      margin-bottom: 18px;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #37b9f7;
+      margin-top: 6px;
+      border-radius: 2px;
     }
     img {
       display: block;
@@ -42,25 +72,48 @@
       max-width: 400px;
       width: 100%;
     }
+    .galeria {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .galeria img {
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+      margin: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      max-width: 180px;
+      width: 100%;
+    }
+    .galeria img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+    }
     .botones {
       display: flex;
       gap: 15px;
       margin: 20px 0;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .boton {
-      background: #00518c;
+      background: linear-gradient(90deg, #00518c 0%, #37b9f7 100%);
       color: #fff;
       border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
+      border-radius: 25px;
+      padding: 12px 28px;
       font-size: 1em;
       cursor: pointer;
-      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
       text-decoration: none;
       display: inline-block;
     }
     .boton:hover {
-      background: #003d66;
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+      background: linear-gradient(90deg, #37b9f7 0%, #00518c 100%);
     }
     ul {
       background: #fff;
@@ -69,82 +122,133 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.07);
       margin-bottom: 20px;
       max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
     p {
       max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto 40px auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+      ul, p, form {
+        max-width: 98vw;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Menú de navegación -->
-  <nav>
+  <nav class="fade-in">
     <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
     <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
-    <a href="#Alvarado 2700, Barracas, C.A.B.A.">Ubicación</a>
+    <a href="Alvarado 2700, Barracas, C.A.B.A.">Ubicación</a>
   </nav>
 
-  <h1>Bienvenido a Siempre A Tu Lado: Cremaciones de Mascotas</h1>
-  <img src="Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" alt="Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" style="max-width: 400px; max-length: 400px;">
-  <p>Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
-  
-  <!-- Botones -->
-  <div class="botones">
-    <a class="boton" href="#servicios">Ver Servicios</a>
-    <a class="boton" href="#contacto">Solicitar Información</a>
-    <a class="boton" href="https://wa.me/5491136584341" target="_blank">WhatsApp</a>
+  <div class="box fade-in">
+    <h1>Bienvenido a Siempre A Tu Lado: Cremaciones de Mascotas</h1>
+    <img src="mascota.jpg" alt="Mascota">
+    <p>Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
+    <div class="botones">
+      <a class="boton" href="#servicios">Ver Servicios</a>
+      <a class="boton" href="#contacto">Solicitar Información</a>
+      <a class="boton" href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
+    </div>
   </div>
 
   <!-- Sección de Servicios -->
-  <h2 id="servicios">Nuestros Servicios</h2>
-  <ul>
-    <li>Atención personalizada</li>
-    <li>Servicio rápido y confiable</li>
-    <li>Opciones de urnas y recuerdos</li>
-    <li>Asesoría durante todo el proceso</li>
-  </ul>
+  <div class="box fade-in">
+    <h2 id="servicios">Nuestros Servicios</h2>
+    <ul>
+      <li>Atención personalizada</li>
+      <li>Servicio rápido y confiable</li>
+      <li>Opciones de urnas y recuerdos</li>
+      <li>Asesoría durante todo el proceso</li>
+    </ul>
+  </div>
 
-  <h2 id="galeria">Galería de Mascotas</h2>
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-  <img src="Mascota 1.jpeg" alt="Mascota 1.jpeg" style="max-width: 225px; max-length: 225px">
-  <img src="Mascota 2.png" alt="Mascota 2.png" style="max-width: 600px; max-length: 1050px">
-  <!-- Agrega más imágenes aquí -->
-</div>
-  
+  <!-- Sección Galería -->
+  <div class="box fade-in">
+    <h2 id="galeria">Galería de Mascotas</h2>
+    <div class="galeria">
+      <img src="mascota.jpg" alt="Mascota 1">
+      <img src="mascota2.jpg" alt="Mascota 2">
+      <img src="mascota3.jpg" alt="Mascota 3">
+      <!-- Agrega más imágenes aquí -->
+    </div>
+  </div>
+
   <!-- Sección de Ubicación -->
-  <h2 id="ubicacion">Ubicación</h2>
-  <p>Estamos ubicados en Alvarado 2700, Barracas, C.A.B.A.</p>
+  <div class="box fade-in">
+    <h2 id="ubicacion">Ubicación</h2>
+    <p>Estamos ubicados en [tu dirección aquí].</p>
+  </div>
 
-  <!-- Sección de Contacto -->
-  <h2 id="contacto">Contacto</h2>
-  <p>Envíanos un mensaje por <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>.</p>
+  <!-- Sección de Contacto y Formulario WhatsApp -->
+  <div class="box fade-in">
+    <h2 id="contacto">Contacto</h2>
+    <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
 
-  <h2 id="formulario">Formulario de Contacto</h2>
-<form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
-  <label>Nombre:<br>
-    <input type="text" id="nombre" required>
-  </label><br><br>
-  <label>Teléfono:<br>
-    <input type="teéfono" id="teléfono" required>
-  </label><br><br>
-  <label>Mensaje:<br>
-    <textarea id="mensaje" rows="4" required></textarea>
-  </label><br><br>
-  <button type="submit" class="boton">Enviar por WhatsApp</button>
-</form>
+    <h2 id="formulario">Formulario de Contacto</h2>
+    <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
+      <label>Nombre:<br>
+        <input type="text" id="nombre" required>
+      </label>
+      <label>Email:<br>
+        <input type="email" id="email" required>
+      </label>
+      <label>Mensaje:<br>
+        <textarea id="mensaje" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="boton">Enviar por WhatsApp</button>
+    </form>
+  </div>
 
-<script>
-function enviarWhatsApp(event) {
-  event.preventDefault();
-  var nombre = document.getElementById('nombre').value;
-  var teléfono = document.getElementById('teléfono').value;
-  var mensaje = document.getElementById('mensaje').value;
-  var numero = '5491136584970'
-
-  var texto = `Hola, soy ${nombre}. Mi correo es ${email}. ${mensaje}`;
-  var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank');
-
-</script>
-</body>}
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      var nombre = document.getElementById('nombre').value;
+      var email = document.getElementById('email').value;
+      var mensaje = document.getElementById('mensaje').value;
+      var numero = 'XXXXXXXXXX'; // <-- Cambia aquí tu número con código de país, ejemplo: 5215512345678
+      var texto = `Hola, soy ${nombre}. Mi correo es ${email}. ${mensaje}`;
+      var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
 </html>
