@@ -2,19 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Siempre A Tu Lado</title>
+  <title>Siempre A Tu Lado - Servicios de Cremación para Mascotas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sé que no es un adiós para siempre porque estarás eternamente en nuestros corazones. Servicios de cremación para mascotas en CABA y Gran Buenos Aires. Atención personalizada, galería, preguntas frecuentes, contacto y más.">
+  <meta name="description" content="Servicios de cremación para mascotas en CABA y Gran Buenos Aires. Atención personalizada, galería, preguntas frecuentes y contacto. Porque el amor trasciende el tiempo y seguimos siempre a tu lado.">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png">
   <style>
     body {
-      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-      background: url('https://www.facebook.com/photo/?fbid=777955237736853&set=a.415319547333759') center center/cover no-repeat fixed;
-      color: #333;
+      font-family: 'Merriweather', 'Segoe UI', Arial, Helvetica, sans-serif;
+      background: url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat fixed;
+      color: #222;
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      /* Efecto overlay de fondo */
       position: relative;
     }
     body::after {
@@ -22,19 +21,18 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background: linear-gradient(120deg, rgba(244,143,177,0.18) 0%, rgba(255,244,250,0.38) 60%);
+      background: linear-gradient(120deg, rgba(80,41,72,0.22) 0%, rgba(255,244,250,0.48) 60%);
       z-index: 0;
       mix-blend-mode: lighten;
     }
     header {
-      background: rgba(244,143,177,0.90);
+      background: rgba(80,41,72,0.93);
       color: #fff;
-      padding: 36px 0 22px 0;
+      padding: 42px 0 28px 0;
       text-align: center;
       border-bottom: 3px solid #f8bbd0;
-      box-shadow: 0 2px 16px rgba(244,143,177,0.15);
+      box-shadow: 0 2px 26px rgba(80,41,72,0.18);
       position: relative;
-      /* Animación de entrada */
       animation: slideDown 1.1s cubic-bezier(.73,.15,.55,1.02);
     }
     @keyframes slideDown {
@@ -42,53 +40,66 @@
       to   { transform: translateY(0); opacity: 1; }
     }
     header img {
-      width: 80px;
-      height: 80px;
+      width: 86px;
+      height: 86px;
       border-radius: 50%;
       border: 3px solid #fff;
-      box-shadow: 0 2px 10px rgba(244,143,177,0.22);
+      box-shadow: 0 4px 20px rgba(80,41,72,0.22);
       position: absolute;
       left: 32px;
       top: 32px;
       background: #fff;
       object-fit: cover;
-      /* Animación de giro suave */
       transition: transform 0.7s cubic-bezier(.6,.1,.49,1.02);
       will-change: transform;
     }
     header img:hover {
-      transform: rotate(-12deg) scale(1.08);
+      transform: rotate(-7deg) scale(1.09);
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.4em;
+      margin-bottom: 6px;
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+    header p {
+      font-size: 1.22em;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 14px;
+      color: #ffdbe5;
+      letter-spacing: 1px;
     }
     nav {
-      background: rgba(255,244,250,0.96);
-      box-shadow: 0 2px 8px rgba(244,143,177,0.09);
+      background: rgba(255,244,250,0.98);
+      box-shadow: 0 2px 8px rgba(80,41,72,0.09);
       display: flex;
       justify-content: center;
-      gap: 32px;
-      padding: 14px 0;
+      gap: 30px;
+      padding: 16px 0 12px 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      /* Animación fade in */
       animation: fadeIn 1.5s;
     }
     nav a {
       text-decoration: none;
-      color: #f48fb1;
-      font-weight: bold;
+      color: #502948;
+      font-weight: 600;
       font-size: 1.15em;
-      transition: color 0.2s, background 0.2s, box-shadow 0.3s;
-      padding: 8px 24px;
+      padding: 9px 28px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(248,187,208,0.04);
       position: relative;
+      transition: color 0.2s, background 0.2s, box-shadow 0.3s;
       will-change: color, background, box-shadow;
     }
     nav a:hover, nav .activo {
       color: #fff;
-      background: #f48fb1;
-      box-shadow: 0 4px 18px rgba(244,143,177,0.15);
-      text-shadow: 0 2px 8px rgba(244,143,177,0.13);
+      background: #502948;
+      box-shadow: 0 4px 18px rgba(80,41,72,0.15);
+      text-shadow: 0 2px 8px rgba(80,41,72,0.11);
     }
     nav a::after {
       content:"";
@@ -107,27 +118,27 @@
       left:20%;
     }
     .main {
-      max-width: 960px;
-      margin: 36px auto 0 auto;
-      padding: 18px;
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      padding: 34px 22px 22px 22px;
       background: rgba(255,244,250,0.96);
-      border-radius: 20px;
-      box-shadow: 0 6px 48px rgba(244,143,177,0.10);
+      border-radius: 24px;
+      box-shadow: 0 8px 64px rgba(80,41,72,0.11);
       position: relative;
-      /* Animación de entrada */
-      animation: fadeInUp 1.3s cubic-bezier(.73,.15,.55,1.02);
+      animation: fadeInUp 1.2s cubic-bezier(.73,.15,.55,1.02);
     }
     @keyframes fadeInUp {
       from { transform: translateY(48px); opacity: 0; }
       to   { transform: translateY(0); opacity: 1; }
     }
     h2 {
-      color: #f48fb1;
+      color: #502948;
       margin-top: 0;
-      font-size: 2em;
+      font-size: 1.7em;
       letter-spacing: 1px;
-      /* Animación de entrada */
-      animation: fadeInTitle 1.3s;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      animation: fadeInTitle 1.2s;
     }
     @keyframes fadeInTitle {
       from { opacity: 0; letter-spacing: 12px;}
@@ -136,24 +147,23 @@
     .servicios-lista {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
-      margin: 24px 0;
+      gap: 34px;
+      margin: 28px 0;
       justify-content: center;
     }
     .servicio {
       background: #fff;
-      border: 1px solid #f8bbd0;
+      border: 1.2px solid #e1bee7;
       border-radius: 12px;
-      flex: 1 1 240px;
-      min-width: 220px;
-      padding: 22px;
-      box-shadow: 0 1px 8px rgba(244,143,177,0.09);
+      flex: 1 1 220px;
+      min-width: 210px;
+      max-width: 280px;
+      padding: 26px 18px;
+      box-shadow: 0 2px 10px rgba(80,41,72,0.07);
       text-align: center;
       position: relative;
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.4s, background 0.4s;
-      will-change: transform, box-shadow, border-color, background;
       cursor: pointer;
-      /* animación de entrada */
       animation: fadeInCard 1.1s cubic-bezier(.6,.1,.49,1.02);
     }
     @keyframes fadeInCard {
@@ -162,136 +172,129 @@
     }
     .servicio:hover {
       transform: translateY(-6px) scale(1.05) rotate(-1.5deg);
-      box-shadow: 0 16px 32px rgba(244,143,177,0.18);
-      border-color: #f48fb1;
-      background: #fff4fa;
+      box-shadow: 0 16px 36px rgba(80,41,72,0.19);
+      border-color: #502948;
+      background: #faf1f5;
     }
     .servicio h3 {
-      color: #f48fb1;
+      color: #502948;
       margin: 0 0 10px 0;
+      font-family: 'Merriweather', serif;
+      font-size: 1.15em;
+      font-weight: 800;
       transition: color 0.2s;
     }
     .servicio:hover h3 {
-      color:#e57399;
+      color:#d07c9b;
     }
     .servicio img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 12px;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 16px;
       border-radius: 50%;
       border: 2px solid #fad1e6;
       object-fit: cover;
-      background: #fff4fa;
+      background: #faf1f5;
       box-shadow: 0 2px 8px rgba(248,187,208,0.09);
       transition: transform 0.6s cubic-bezier(.73,.15,.55,1.02);
-      will-change: transform;
     }
     .servicio:hover img {
       transform: scale(1.18) rotate(7deg);
     }
-    /* Galería: animación y efecto zoom */
     .galeria {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 24px 0;
+      margin: 28px 0;
     }
     .galeria img {
-      border-radius: 16px;
-      box-shadow: 0 2px 14px rgba(244,143,177,0.13);
+      border-radius: 18px;
+      box-shadow: 0 2px 18px rgba(80,41,72,0.14);
       transition: transform 0.3s, box-shadow 0.2s, border 0.2s, filter 0.3s;
-      max-width: 220px;
+      max-width: 210px;
       width: 100%;
-      min-width: 160px;
-      height: 160px;
+      min-width: 150px;
+      height: 150px;
       object-fit: cover;
       margin: 10px;
-      border: 3px solid #fad1e6;
+      border: 3px solid #e1bee7;
       background: #fff;
       filter: grayscale(30%) contrast(1.1) brightness(0.96);
-      /* animación fade in */
       animation: fadeInCard 1.2s cubic-bezier(.73,.15,.55,1.02);
     }
     .galeria img:hover {
-      transform: scale(1.13) rotate(-2deg);
-      box-shadow: 0 12px 32px rgba(244,143,177,0.25);
-      border-color: #f48fb1;
-      background: #fce4ec;
+      transform: scale(1.11) rotate(-2deg);
+      box-shadow: 0 12px 32px rgba(80,41,72,0.2);
+      border-color: #d07c9b;
+      background: #faf1f5;
       filter: none;
       z-index:1;
     }
-    /* Botón CTA animado */
     .cta {
       display: inline-block;
       margin: 32px auto 0 auto;
-      background: linear-gradient(90deg,#f48fb1 0%,#fad1e6 100%);
+      background: linear-gradient(90deg,#502948 0%,#d07c9b 100%);
       color: #fff;
       border: none;
       border-radius: 22px;
       padding: 14px 34px;
-      font-size: 1.15em;
-      font-weight: bold;
+      font-size: 1.11em;
+      font-weight: 700;
       text-decoration: none;
       transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-      box-shadow: 0 2px 18px rgba(244,143,177,0.12);
+      box-shadow: 0 2px 18px rgba(80,41,72,0.14);
       letter-spacing: 1px;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      /* animación */
       animation: fadeInUp 1.2s cubic-bezier(.73,.15,.55,1.02);
     }
-    .cta::after {
-      content:"";
-      position:absolute;
-      left:-40px;top:-40px;
-      width:0;height:0;
-      border-radius:50%;
-      background:rgba(244,143,177,0.13);
-      transition:width 0.7s,height 0.7s,left 0.7s,top 0.7s;
-      z-index:0;
-    }
     .cta:hover {
-      background: linear-gradient(90deg,#fad1e6 0%,#f48fb1 100%);
+      background: linear-gradient(90deg,#d07c9b 0%,#502948 100%);
       color: #fff;
       transform: scale(1.07);
-      box-shadow: 0 6px 26px rgba(244,143,177,0.19);
+      box-shadow: 0 6px 26px rgba(80,41,72,0.19);
     }
-    .cta:hover::after {
-      width:220px;height:220px;left:-60px;top:-60px;
-    }
-    /* FAQ animación expansión con sombra */
     .faq {
-      background: #fce4ec;
+      background: #faf1f5;
       border-radius: 12px;
-      padding: 22px 16px;
+      padding: 26px 20px;
       max-width: 650px;
       margin: 36px auto;
-      box-shadow: 0 1px 10px rgba(244,143,177,0.13);
+      box-shadow: 0 1px 14px rgba(80,41,72,0.13);
       transition: box-shadow 0.4s, background 0.4s;
       animation: fadeInCard 1.1s cubic-bezier(.73,.15,.55,1.02);
     }
     .faq:hover {
-      box-shadow: 0 6px 40px rgba(244,143,177,0.24);
-      background: #fff4fa;
+      box-shadow: 0 6px 40px rgba(80,41,72,0.24);
+      background: #fff;
     }
     .faq h3 {
-      color: #f48fb1;
+      color: #502948;
+      font-size: 1.17em;
+      font-family: 'Merriweather', serif;
       margin-top: 0;
       transition: color 0.2s;
+      font-weight: 700;
     }
     .faq:hover h3 {
-      color:#e57399;
+      color:#d07c9b;
     }
     .faq ul {
       padding-left: 20px;
+      font-size: 1.07em;
+      line-height: 1.6;
+      color: #444;
+    }
+    .faq ul span {
+      color:#d07c9b;
     }
     .contacto {
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 1px 10px rgba(244,143,177,0.09);
-      padding: 30px;
+      box-shadow: 0 1px 10px rgba(80,41,72,0.09);
+      padding: 34px 20px;
       max-width: 520px;
       margin: 44px auto 0 auto;
       text-align: center;
@@ -306,12 +309,12 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: rgba(244,143,177,0.19);
+      background: rgba(80,41,72,0.13);
       z-index: 0;
       filter: blur(6px);
     }
     .contacto a {
-      color: #f48fb1;
+      color: #502948;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.2s;
@@ -319,7 +322,7 @@
       position:relative;
     }
     .contacto a:hover {
-      color: #e57399;
+      color: #d07c9b;
       text-decoration: underline;
     }
     .redes {
@@ -335,34 +338,36 @@
       width: 32px;
       height: 32px;
       border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(244,143,177,0.11);
+      box-shadow: 0 1px 4px rgba(80,41,72,0.11);
       transition: transform 0.3s, box-shadow 0.3s;
       filter: grayscale(40%);
     }
     .redes a:hover img {
-      transform: scale(1.24) rotate(-7deg);
-      box-shadow: 0 8px 22px rgba(244,143,177,0.19);
+      transform: scale(1.18) rotate(-7deg);
+      box-shadow: 0 8px 22px rgba(80,41,72,0.22);
       filter: none;
     }
     footer {
       text-align: center;
-      padding: 34px 0 18px 0;
-      background: linear-gradient(90deg,#fad1e6 0%, #f48fb1 100%);
+      padding: 30px 0 14px 0;
+      background: linear-gradient(90deg,#d07c9b 0%, #502948 100%);
       color: #fff;
       margin-top: 64px;
-      border-top: 2px solid #f8bbd0;
-      font-size: 1.1em;
-      box-shadow: 0 -2px 10px rgba(244,143,177,0.08);
+      border-top: 2px solid #e1bee7;
+      font-size: 1.07em;
+      font-family: 'Merriweather', serif;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 10px rgba(80,41,72,0.08);
       animation: fadeIn 2s;
     }
     @media (max-width: 600px) {
       .main, header, nav, footer { padding-left: 8px; padding-right: 8px; }
-      .servicios-lista { flex-direction: column; gap: 16px; }
+      .servicios-lista { flex-direction: column; gap: 18px; }
       .galeria { flex-direction: column; align-items: center; }
-      .galeria img { max-width: 99vw; height: 140px; }
+      .galeria img { max-width: 99vw; height: 120px; }
       header img { left: 12px; top: 10px; width: 56px; height: 56px; }
+      h2 { font-size: 1.2em;}
     }
-    /* Detalle visual extra: animación de entrada */
     .fade-in {
       opacity: 0;
       animation: fadeIn 1.2s forwards;
@@ -371,10 +376,9 @@
       to { opacity: 1; }
     }
     ::selection {
-      background: #f8bbd0;
+      background: #d07c9b;
       color: #fff;
     }
-    /* Animación de partículas */
     .particles {
       position: fixed;
       pointer-events: none;
@@ -386,7 +390,7 @@
       position: absolute;
       border-radius: 50%;
       opacity: 0.13;
-      background: #f48fb1;
+      background: #d07c9b;
       pointer-events:none;
       animation: particleMove 13s linear infinite;
     }
@@ -401,15 +405,14 @@
       }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Partículas decorativas -->
   <div class="particles" id="particles"></div>
-
   <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logotipo Crematorio Mascotas">
+    <img src="Logotipo siempre a tu lado.PNG" alt="Logotipo Siempre A Tu Lado">
     <h1>Siempre A Tu Lado</h1>
-    <p>Sé que no es un adiós para siempre porque estarás eternamente en nuestros corazones</p>
+    <p>El amor trasciende el tiempo y seguimos siempre a tu lado</p>
   </header>
   <nav>
     <a href="#servicios" class="activo">Servicios</a>
@@ -424,25 +427,25 @@
         <div class="servicio">
           <img src="Logotipo siempre a tu lado.PNG" alt="Cremación Individual">
           <h3>Cremación Individual</h3>
-          <p>Tu mascota es cremada sola y sus cenizas se entregan en una urna personalizada junto con certificado.</p>
+          <p>Servicio exclusivo y respetuoso. Las cenizas de tu mascota se entregan en urna personalizada, junto con certificado de cremación y atención profesional.</p>
         </div>
         <div class="servicio">
           <img src="Logotipo siempre a tu lado.PNG" alt="Cremación Colectiva">
           <h3>Cremación Colectiva</h3>
-          <p>Servicio más económico. Las cenizas no se entregan, pero el proceso es digno y seguro.</p>
+          <p>Alternativa económica, realizada con el mismo cuidado y respeto. Las cenizas no se entregan.</p>
         </div>
         <div class="servicio">
           <img src="Logotipo siempre a tu lado.PNG" alt="Recogida a Domicilio">
           <h3>Recogida a Domicilio</h3>
-          <p>Vamos por tu mascota a tu domicilio u hospital veterinario las 24 horas.</p>
+          <p>Retiramos a tu mascota en domicilio o clínica veterinaria, en CABA y Gran Buenos Aires, con vehículos adaptados y personal capacitado.</p>
         </div>
         <div class="servicio">
           <img src="Logotipo siempre a tu lado.PNG" alt="Urnas y Recuerdos">
           <h3>Urnas y Recuerdos</h3>
-          <p>Variedad de urnas, placas y recuerdos para conservar a tu ser especial <a href="https://pulvisurns.com/es/pages/pet-cremation-services-in-the-usas" target="_blank" rel="noopener">Ver opciones internacionales</a></p>
+          <p>Ofrecemos una selección de urnas, placas, huellas y recuerdos para conservar a tu ser especial. <a href="https://pulvisurns.com/es/pages/pet-cremation-services-in-the-usa" target="_blank" rel="noopener">Ver opciones internacionales</a></p>
         </div>
       </div>
-      <a class="cta" href="https://wa.me/5491136584970" target="_blank" rel="noopener">Solicita tu servicio por WhatsApp</a>
+      <a class="cta" href="https://wa.me/5491136584970" target="_blank" rel="noopener">Solicitar servicio por WhatsApp</a>
     </section>
     <section id="galeria">
       <h2>Galería de Mascotas</h2>
@@ -456,29 +459,34 @@
     <section class="faq" id="faq">
       <h3>Preguntas Frecuentes</h3>
       <ul>
-        <li>¿Cómo sé que las cenizas son de mi mascota? <br>
-          <span style="color:#f48fb1;">La cremación individual garantiza que solo las cenizas de tu mascota sean entregadas, junto con certificado.</span>
+        <li>¿Cómo sé que las cenizas son de mi mascota?<br>
+          <span>La cremación individual garantiza que las cenizas entregadas corresponden exclusivamente a tu mascota. Se incluye certificado y puedes solicitar asistencia presencial.</span>
         </li>
-        <li>¿Qué tipos de urnas ofrecen? <br>
-          <span style="color:#f48fb1;">Urnas de cerámica, madera y ecológicas, además de recuerdos personalizados.</span>
+        <li>¿Qué tipos de urnas ofrecen?<br>
+          <span>Disponemos de urnas en cerámica, madera, ecológicas y opciones personalizadas. También placas, huellas y recuerdos especiales.</span>
         </li>
-        <li>¿Qué hago si mi mascota falleció en casa? <br>
-          <span style="color:#f48fb1;">Solicita el servicio de recogida a domicilio las 24 horas vía WhatsApp o llamada.</span>
+        <li>¿Qué hago si mi mascota falleció en casa?<br>
+          <span>Puedes contactarnos por WhatsApp o teléfono las 24 horas para coordinar la recogida en domicilio.</span>
         </li>
+        <li>¿Ofrecen atención psicológica o acompañamiento?<br>
+          <span>Contamos con asesoramiento y contención en duelo para ayudarte en este difícil momento.</span>
+        </li>
+      </ul>
+    </section>
     <section class="contacto" id="contacto">
       <h2>Contacto</h2>
       <p>WhatsApp: <a href="https://wa.me/5491136584970" target="_blank">5491136584970</a> <br>
-      Correo: <a href="solangebazzano211082@gmail.com">solangebazzano211082@gmail.com</a></p>
+      Correo: <a href="mailto:solangebazzano211082@gmail.com">solangebazzano211082@gmail.com</a></p>
       <div class="redes">
         <a href="https://www.facebook.com/profile.php?id=100065671501966#" target="_blank" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
         <a href="https://www.instagram.com/siempre_a_tu_lado_cremaciones/?hl=es" target="_blank" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
         <a href="https://wa.me/5491136584970" target="_blank" title="WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
       </div>
-      <a class="cta" href="https://wa.me/5491136584970" target="_blank">Solicita información por WhatsApp</a>
+      <a class="cta" href="https://wa.me/5491136584970" target="_blank">Solicitar información por WhatsApp</a>
     </section>
   </div>
   <footer>
-    &copy; 2025 Siempre A Tu Lado, cremaciones de mascotas</a>
+    &copy; 2025 Siempre A Tu Lado | Servicios de Cremación para Mascotas | CABA y Gran Buenos Aires
   </footer>
   <script>
     // Partículas decorativas flotantes animadas
@@ -489,12 +497,12 @@
         p.className = 'particle';
         p.style.left = (Math.random()*100) + 'vw';
         p.style.top = (-Math.random()*40) + 'vh';
-        p.style.width = p.style.height = (16 + Math.random()*24) + 'px';
+        p.style.width = p.style.height = (14 + Math.random()*18) + 'px';
         p.style.animationDuration = (10 + Math.random()*9) + 's';
         container.appendChild(p);
       }
     }
-    crearParticulas(22);
+    crearParticulas(18);
 
     // Animación scroll reveal para secciones
     function revealOnScroll() {
