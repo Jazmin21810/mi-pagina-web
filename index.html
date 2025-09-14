@@ -228,7 +228,7 @@
         <input type="text" id="nombre" required>
       </label>
       <label>Teléfono:<br>
-        <input type="teléfono" id="teléfono" required>
+        <input type="number" id="teléfono" required>
       </label>
       <label>Mensaje:<br>
         <textarea id="mensaje" rows="4" required></textarea>
@@ -243,7 +243,7 @@
       var nombre = document.getElementById('nombre').value;
       var teléfono = document.getElementById('teléfono').value;
       var mensaje = document.getElementById('mensaje').value;
-      var numero = '5491136584970'; // <-- Cambia aquí tu número con código de país, ejemplo: 5215512345678
+      var numero = '5491136584970';
       var texto = `Hola, soy ${nombre}. Mi contacto es ${teléfono}. ${mensaje}`;
       var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
