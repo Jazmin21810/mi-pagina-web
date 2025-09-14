@@ -268,7 +268,7 @@
       <div class="botones">
         <a class="boton" href="#servicios">Ver Servicios</a>
         <a class="boton" href="#contacto">Solicitar Información</a>
-        <a class="boton" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+        <a class="boton" href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
       </div>
     </div>
 
@@ -302,16 +302,13 @@
 
     <!-- Sección de Contacto y Formulario WhatsApp -->
     <div class="box fade-in">
-      <h2 id="contacto">Contacto</h2>
-      <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
-
-      <h2 id="formulario">Formulario de Contacto</h2>
+      <h2 id="formulario">Contactanos enviando los siguientes datos</h2>
       <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
         <label>Nombre:<br>
           <input type="text" id="nombre" required placeholder="Tu nombre">
         </label>
-        <label>Email:<br>
-          <input type="email" id="email" required placeholder="Tu correo">
+        <label>Teléfono/Móvil:<br>
+          <input type="number" id="teléfono" required placeholder="Su teléfono/Móvil">
         </label>
         <label>Mensaje:<br>
           <textarea id="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
@@ -325,10 +322,10 @@
     function enviarWhatsApp(event) {
       event.preventDefault();
       var nombre = document.getElementById('nombre').value;
-      var email = document.getElementById('email').value;
+      var teléfono = document.getElementById('number').value;
       var mensaje = document.getElementById('mensaje').value;
-      var numero = 'XXXXXXXXXX'; // <-- Cambia aquí tu número con código de país, ejemplo: 5215512345678
-      var texto = `Hola, soy ${nombre}. Mi correo es ${email}. ${mensaje}`;
+      var numero = '549113658497''; 
+      var texto = `Hola, soy ${nombre}. ${mensaje}`;
       var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
     }
