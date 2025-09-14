@@ -2,17 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cremaciones de Mascotas</title>
+  <title>Siempre A Tu Lado: Cremaciones de Mascotas</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fcedf4;
+      background-color: #f6f6f6;
       color: #333;
       margin: 0;
       padding: 20px;
     }
+    nav {
+      background: #00518c;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: #003d66;
+    }
     h1 {
-      color: #fce0ac;
+      color: #00518c;
       margin-bottom: 10px;
     }
     img {
@@ -22,6 +41,26 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       max-width: 400px;
       width: 100%;
+    }
+    .botones {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .boton {
+      background: #00518c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .boton:hover {
+      background: #003d66;
     }
     ul {
       background: #fff;
@@ -37,15 +76,40 @@
   </style>
 </head>
 <body>
-  <h1>Bienvenido a Siempre A Tu Lado</h1>
-  <img src= "Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" alt="Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" style="max-width: 1050px;max-length: 600px;">
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+    <a href="#ubicacion">Ubicación</a>
+  </nav>
+
+  <h1>Bienvenido a Siempre A Tu Lado: Cremaciones de Mascotas</h1>
+  <img src="mascota.jpg" alt="Mascota" style="max-width: 400px;">
   <p>Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
+  
+  <!-- Botones -->
+  <div class="botones">
+    <a class="boton" href="#servicios">Ver Servicios</a>
+    <a class="boton" href="#contacto">Solicitar Información</a>
+    <a class="boton" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+  </div>
+
+  <!-- Sección de Servicios -->
+  <h2 id="servicios">Nuestros Servicios</h2>
   <ul>
     <li>Atención personalizada</li>
     <li>Servicio rápido y confiable</li>
     <li>Opciones de urnas y recuerdos</li>
     <li>Asesoría durante todo el proceso</li>
   </ul>
-  <p>Contactanos para más información sobre nuestros servicios.</p>
+
+  <!-- Sección de Ubicación -->
+  <h2 id="ubicacion">Ubicación</h2>
+  <p>Estamos ubicados en [Alvarado 2700, Barracas, C.A.B.A.].</p>
+
+  <!-- Sección de Contacto -->
+  <h2 id="contacto">Contacto</h2>
+  <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
 </body>
 </html>
