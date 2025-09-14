@@ -111,5 +111,32 @@
   <!-- Sección de Contacto -->
   <h2 id="Solange Bazzano">Contacto</h2>
   <p>Envíanos un mensaje por <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>.</p>
+  <h2 id="formulario">Formulario de Contacto</h2>
+<form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
+  <label>Nombre:<br>
+    <input type="text" id="nombre" required>
+  </label><br><br>
+  <label>Teléfono:<br>
+    <input type="telefono" id="telefono" required>
+  </label><br><br>
+  <label>Mensaje:<br>
+    <textarea id="mensaje" rows="4" required></textarea>
+  </label><br><br>
+  <button type="submit" class="boton">Enviar por WhatsApp</button>
+</form>
+
+<script>
+function enviarWhatsApp(event) {
+  event.preventDefault();
+  var nombre = document.getElementById('nombre').value;
+  var telefono = document.getElementById('telefono').value;
+  var mensaje = document.getElementById('mensaje').value;
+  var numero = '5491136584970'; // <-- pon aquí tu número sin espacios ni guiones, con código de país. Ejemplo: 5215512345678
+
+  var texto = `Hola, soy ${nombre}. Mi correo es ${email}. ${mensaje}`;
+  var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+}
+</script>
 </body>
 </html>
