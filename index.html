@@ -2,82 +2,232 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Somos Siempre A Tu Lado</title>
+  <title>Crematorios de Mascotas México</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Despide a tu compañero de vida con respeto y dignidad. Servicios de cremación para mascotas en México. Atención personalizada, galería, preguntas frecuentes, contacto y más.">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png">
   <style>
-    :root {
-      --rosa-cuerpo: #fff4fa;
-      --rosa-2: #fad1e6;
-      --rosa-3: #f8bbd0;
-      --rosa-4: #f48fb1;
-      --rosa-5: #e1bee7;
-      --rosa-6: #fce4ec;
-      --negro: #000;
-      --gris: #333;
-      --blanco: #fff;
-    }
     body {
-      font-family: 'Times New Roman', Times, serif;
-      background-image: url('https://i0.wp.com/planetamascotaperu.com/wp-content/uploads/2023/03/Rainbow-Bridge.jpg?w=780&ssl=1');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: var(--gris);
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      background: url('https://i0.wp.com/planetamascotaperu.com/wp-content/uploads/2023/03/Rainbow-Bridge.jpg?w=780&ssl=1') center center/cover no-repeat fixed;
+      color: #333;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       min-height: 100vh;
     }
-    .cuerpo {
-      /* Puedes mantener el fondo color si quieres más legibilidad */
-      background: var(--rosa-cuerpo);
-      border-radius: 22px;
-      margin: 0 auto;
-      max-width: 900px;
-      padding: 32px 18px;
-      box-shadow: 0 4px 32px rgba(248,187,208,0.13);
-      backdrop-filter: blur(1px);
+    header {
+      background: rgba(244,143,177,0.90);
+      color: #fff;
+      padding: 36px 0 22px 0;
+      text-align: center;
+      border-bottom: 3px solid #f8bbd0;
+      box-shadow: 0 2px 16px rgba(244,143,177,0.15);
+      position: relative;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 10px rgba(244,143,177,0.22);
+      position: absolute;
+      left: 32px;
+      top: 32px;
+      background: #fff;
+      object-fit: cover;
     }
     nav {
-      background: var(--rosa-6);
-      padding: 14px 24px;
-      margin-bottom: 28px;
-      border-radius: 12px;
+      background: rgba(255,244,250,0.96);
+      box-shadow: 0 2px 8px rgba(244,143,177,0.09);
       display: flex;
-      gap: 24px;
-      box-shadow: 0 2px 16px rgba(250,209,230,0.15);
+      justify-content: center;
+      gap: 32px;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      color: var(--gris);
+      text-decoration: none;
+      color: #f48fb1;
+      font-weight: bold;
+      font-size: 1.15em;
+      transition: color 0.2s, background 0.2s;
+      padding: 8px 24px;
+      border-radius: 8px;
+    }
+    nav a:hover, nav .activo {
+      color: #fff;
+      background: #f48fb1;
+    }
+    .main {
+      max-width: 960px;
+      margin: 36px auto 0 auto;
+      padding: 18px;
+      background: rgba(255,244,250,0.96);
+      border-radius: 20px;
+      box-shadow: 0 6px 48px rgba(244,143,177,0.10);
+      position: relative;
+    }
+    h2 {
+      color: #f48fb1;
+      margin-top: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    .servicios-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 24px 0;
+      justify-content: center;
+    }
+    .servicio {
+      background: #fff;
+      border: 1px solid #f8bbd0;
+      border-radius: 12px;
+      flex: 1 1 240px;
+      min-width: 220px;
+      padding: 22px;
+      box-shadow: 0 1px 8px rgba(244,143,177,0.09);
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .servicio:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 22px rgba(244,143,177,0.19);
+      border-color: #f48fb1;
+      background: #fff4fa;
+    }
+    .servicio h3 {
+      color: #f48fb1;
+      margin: 0 0 10px 0;
+    }
+    .servicio img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      border: 2px solid #fad1e6;
+      object-fit: cover;
+      background: #fff4fa;
+    }
+    .galeria {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 24px 0;
+    }
+    .galeria img {
+      border-radius: 16px;
+      box-shadow: 0 2px 14px rgba(244,143,177,0.13);
+      transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+      max-width: 220px;
+      width: 100%;
+      min-width: 160px;
+      height: 160px;
+      object-fit: cover;
+      margin: 10px;
+      border: 3px solid #fad1e6;
+      background: #fff;
+    }
+    .galeria img:hover {
+      transform: scale(1.08) rotate(-2deg);
+      box-shadow: 0 8px 28px rgba(244,143,177,0.21);
+      border-color: #f48fb1;
+      background: #fce4ec;
+    }
+    .cta {
+      display: inline-block;
+      margin: 32px auto 0 auto;
+      background: #f48fb1;
+      color: #fff;
+      border: none;
+      border-radius: 22px;
+      padding: 14px 34px;
+      font-size: 1.15em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(244,143,177,0.15);
+      letter-spacing: 1px;
+    }
+    .cta:hover {
+      background: #e57399;
+      color: #fff;
+      transform: scale(1.04);
+    }
+    .faq {
+      background: #fce4ec;
+      border-radius: 12px;
+      padding: 22px 16px;
+      max-width: 650px;
+      margin: 36px auto;
+      box-shadow: 0 1px 10px rgba(244,143,177,0.09);
+    }
+    .faq h3 {
+      color: #f48fb1;
+      margin-top: 0;
+    }
+    .faq ul {
+      padding-left: 20px;
+    }
+    .contacto {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 10px rgba(244,143,177,0.09);
+      padding: 30px;
+      max-width: 520px;
+      margin: 44px auto 0 auto;
+      text-align: center;
+    }
+    .contacto a {
+      color: #f48fb1;
       text-decoration: none;
       font-weight: bold;
-      padding: 8px 18px;
-      border-radius: 8px;
-      transition: background 0.2s, color 0.2s;
-      background: var(--rosa-3);
-      letter-spacing: 1px;
-      font-family: 'Times New Roman', Times, serif;
+      transition: color 0.2s;
     }
-    nav a:hover {
-      background: var(--rosa-2);
-      color: var(--rosa-4);
+    .contacto a:hover {
+      color: #e57399;
+      text-decoration: underline;
     }
-    .box {
-      background: var(--rosa-6);
-      border-radius: 20px;
-      box-shadow: 0 4px 32px rgba(250,209,230,0.13);
-      padding: 32px;
-      margin-bottom: 38px;
-      color: var(--gris);
-      font-family: 'Times New Roman', Times, serif;
+    .redes {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 20px;
+      align-items: center;
     }
-    h1, h2 {
-      color: var(--gris);
-      margin-bottom: 14px;
-      font-family: 'Times New Roman', Times, serif;
+    .redes a img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(244,143,177,0.11);
+      transition: transform 0.2s;
     }
-    .titulo-cursiva {
-      font-style: italic;
+    .redes a:hover img {
+      transform: scale(1.2) rotate(-6deg);
     }
+    footer {
+      text-align: center;
+      padding: 34px 0 18px 0;
+      background: #fad1e6;
+      color: #fff;
+      margin-top: 64px;
+      border-top: 2px solid #f8bbd0;
+      font-size: 1.1em;
+      box-shadow: 0 -2px 10px rgba(244,143,177,0.08);
+    }
+    @media (max-width: 600px) {
+      .main, header, nav, footer { padding-left: 8px; padding-right: 8px; }
+      .servicios-lista { flex-direction: column; gap: 16px; }
+      .galeria { flex-direction: column; align-items: center; }
+      .galeria img { max-width: 99vw; height: 140px; }
+      header img { left: 12px; top: 10px; width: 56px; height: 56px; }
+    }
+    /* Detalle visual extra: animación de entrada */
     .fade-in {
       opacity: 0;
       animation: fadeIn 1.2s forwards;
@@ -85,268 +235,95 @@
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-    h2 {
-      position: relative;
-      font-size: 1.6em;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: var(--rosa-4);
-      margin-top: 7px;
-      border-radius: 2px;
-    }
-    /* Mejor resolución para imágenes generales */
-    img, .galeria img {
-      display: block;
-      margin: 22px auto;
-      border-radius: 16px;
-      box-shadow: 0 2px 16px rgba(250,209,230,0.22);
-      width: 100%;
-      max-width: 700px;
-      height: auto;
-      border: 4px solid var(--rosa-5);
-      background: var(--rosa-6);
-      object-fit: cover;
-      image-rendering: auto;
-    }
-    /* Galería de imágenes: más grandes y nítidas */
-    .galeria {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .galeria img {
-      max-width: 320px;
-      min-width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 2px 14px rgba(250,209,230,0.13);
-      margin: 10px;
-      transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-      border: 3px solid var(--rosa-3);
-      background: var(--rosa-2);
-    }
-    .galeria img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 28px rgba(250,209,230,0.21);
-      border-color: var(--rosa-4);
-      background: var(--rosa-6);
-    }
-    .botones {
-      display: flex;
-      gap: 18px;
-      margin: 24px 0;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .boton {
-      background: linear-gradient(90deg, var(--rosa-2) 0%, var(--rosa-4) 100%);
-      color: var(--negro);
-      border: none;
-      border-radius: 28px;
-      padding: 14px 36px;
-      font-size: 1em;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(250,209,230,0.13);
-      transition: transform 0.18s, box-shadow 0.18s, background 0.2s, color 0.2s;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-family: 'Times New Roman', Times, serif;
-    }
-    .boton:hover {
-      transform: scale(1.06);
-      box-shadow: 0 6px 26px rgba(250,209,230,0.19);
-      background: linear-gradient(90deg, var(--rosa-3) 0%, var(--rosa-5) 100%);
-      color: var(--rosa-4);
-    }
-    ul {
-      background: var(--rosa-3);
-      padding: 19px;
-      border-radius: 12px;
-      box-shadow: 0 1px 8px rgba(250,209,230,0.12);
-      margin-bottom: 24px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--negro);
-      font-weight: 500;
-      font-family: 'Times New Roman', Times, serif;
-    }
-    p {
-      max-width: 660px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--gris);
-      font-family: 'Times New Roman', Times, serif;
-    }
-    form {
-      max-width: 420px;
-      margin: 0 auto 44px auto;
-      background: var(--rosa-1);
-      padding: 28px 34px;
-      border-radius: 16px;
-      box-shadow: 0 2px 16px rgba(250,209,230,0.16);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      color: var(--gris);
-      font-family: 'Times New Roman', Times, serif;
-    }
-    label {
-      font-weight: bold;
-      margin-bottom: 7px;
-      color: var(--gris);
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1.5px solid var(--rosa-3);
-      margin-top: 4px;
-      font-size: 1em;
-      box-sizing: border-box;
-      background: var(--rosa-6);
-      color: var(--gris);
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 500;
-    }
-    input::placeholder, textarea::placeholder {
-      color: var(--rosa-4);
-      opacity: 0.9;
-      font-family: 'Times New Roman', Times, serif;
-    }
-    @media (max-width: 900px) {
-      .galeria img {
-        max-width: 99vw;
-        height: 180px;
-      }
-      img {
-        max-width: 99vw;
-      }
-    }
-    @media (max-width: 600px) {
-      .cuerpo {
-        padding: 12px 2vw;
-      }
-      .galeria {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      ul, p, form {
-        max-width: 98vw;
-      }
-      .galeria img {
-        height: 140px;
-      }
-    }
     ::selection {
-      background: var(--rosa-3);
-      color: var(--negro);
-    }
-    a {
-      color: var(--gris);
-      text-decoration: underline;
-      font-weight: bold;
-      font-family: 'Times New Roman', Times, serif;
-    }
-    a:hover {
-      color: var(--rosa-4);
+      background: #f8bbd0;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <!-- Menú de navegación -->
-  <nav class="fade-in">
-    <a href="#servicios">Servicios</a>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logotipo Crematorio Mascotas">
+    <h1>Crematorios de Mascotas México</h1>
+    <p>Despide a tu compañero con respeto y dignidad</p>
+  </header>
+  <nav>
+    <a href="#servicios" class="activo">Servicios</a>
     <a href="#galeria">Galería</a>
+    <a href="#faq">Preguntas Frecuentes</a>
     <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
-    <a href="#ubicacion">Ubicación</a>
+    <a href="https://crematoriosdemascotas.com.mx/" target="_blank" rel="noopener">Directorio Nacional</a>
+    <a href="https://www.huellitasenelcielo.com.mx/" target="_blank" rel="noopener">Huellitas en el Cielo</a>
+    <a href="https://siemprejuntoscrematorios.com/" target="_blank" rel="noopener">Siempre Juntos</a>
   </nav>
-
-  <div class="cuerpo">
-    <div class="box fade-in">
-      <h1 class="titulo-cursiva">Somos Siempre A Tu Lado</h1>
-      <img src="Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" alt="Etiquetas Cuadradas Condimentos y Especias para Cocina Minimalista Blanco y Negro.png" width="400" height="auto" loading="lazy">
-      <p> Ofrecemos servicios de cremación digna y respetuosa para tu mascota. Nuestro objetivo es acompañarte en este momento difícil, brindando apoyo y cuidado profesional.</p>
-      <p> "Sé que no es un adiós para siempre porque estarás eternamente en nuestros corazones".</p>
-      <div class="botones">
-        <a class="boton" href="#servicios">Ver Servicios</a>
-        <a class="boton" href="#contacto">Solicitar Información</a>
-        <a class="boton" href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>
+  <div class="main fade-in">
+    <section id="servicios">
+      <h2>Servicios Funerarios para Mascotas</h2>
+      <div class="servicios-lista">
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cremación Individual">
+          <h3>Cremación Individual</h3>
+          <p>Tu mascota es cremada sola y sus cenizas se entregan en una urna personalizada junto con certificado.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Cremación Colectiva">
+          <h3>Cremación Colectiva</h3>
+          <p>Servicio más económico. Las cenizas no se entregan, pero el proceso es digno y seguro.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Recogida a Domicilio">
+          <h3>Recogida a Domicilio</h3>
+          <p>Vamos por tu mascota a tu domicilio u hospital veterinario las 24 horas.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Urnas y Recuerdos">
+          <h3>Urnas y Recuerdos</h3>
+          <p>Variedad de urnas, placas y recuerdos para conservar a tu amigo. <a href="https://pulvisurns.com/es/pages/pet-cremation-services-in-the-usa" target="_blank" rel="noopener">Ver opciones internacionales</a></p>
+        </div>
       </div>
-    </div>
-
-    <!-- Sección de Servicios -->
-    <div class="box fade-in">
-      <h2 id="servicios">Nuestros Servicios</h2>
-      <ul>
-        <li>Atención personalizada</li>
-        <li>Servicio rápido y confiable</li>
-        <li>Opciones de urnas y recuerdos</li>
-        <li>Asesoría durante todo el proceso</li>
-      </ul>
-    </div>
-
-    <!-- Sección Galería -->
-    <div class="box fade-in">
-      <h2 id="galeria">Galería de Mascotas</h2>
+      <a class="cta" href="https://wa.me/5215512345678" target="_blank" rel="noopener">Solicita tu servicio por WhatsApp</a>
+    </section>
+    <section id="galeria">
+      <h2>Galería de Mascotas</h2>
       <div class="galeria">
-        <img src="mascota.jpg" alt="Mascota 1" width="320" height="220" loading="lazy">
-        <img src="mascota2.jpg" alt="Mascota 2" width="320" height="220" loading="lazy">
-        <img src="mascota3.jpg" alt="Mascota 3" width="320" height="220" loading="lazy">
-        <!-- Agrega más imágenes aquí -->
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=500&q=80" alt="Mascota 1">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=500&q=80" alt="Mascota 2">
+        <img src="https://images.unsplash.com/photo-1518715308788-3002a15b13b7?auto=format&fit=crop&w=500&q=80" alt="Mascota 3">
+        <img src="https://images.unsplash.com/photo-15053?auto=format&fit=crop&w=500&q=80" alt="Mascota 4">
       </div>
-    </div>
-
-    <!-- Sección de Ubicación -->
-    <div class="box fade-in">
-      <h2 id="ubicacion">Ubicación</h2>
-      <p>Estamos ubicados en [tu dirección aquí].</p>
-    </div>
-
-    <!-- Sección de Contacto y Formulario WhatsApp -->
-    <div class="box fade-in">
-      <h2 id="formulario">Contactanos enviando los siguientes datos</h2>
-      <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
-        <label>Nombre:<br>
-          <input type="text" id="nombre" required placeholder="Tu nombre">
-        </label>
-        <label>Teléfono/Móvil:<br>
-          <input type="number" id="teléfono" required placeholder="Su teléfono/Móvil">
-        </label>
-        <label>Mensaje:<br>
-          <textarea id="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
-        </label>
-        <button type="submit" class="boton">Enviar por WhatsApp</button>
-      </form>
-    </div>
+    </section>
+    <section class="faq" id="faq">
+      <h3>Preguntas Frecuentes</h3>
+      <ul>
+        <li>¿Cómo sé que las cenizas son de mi mascota? <br>
+          <span style="color:#f48fb1;">La cremación individual garantiza que solo las cenizas de tu mascota sean entregadas, junto con certificado. Puedes asistir al proceso.</span>
+        </li>
+        <li>¿Qué tipos de urnas ofrecen? <br>
+          <span style="color:#f48fb1;">Urnas de cerámica, madera y ecológicas, además de recuerdos personalizados.</span>
+        </li>
+        <li>¿Qué hago si mi mascota falleció en casa? <br>
+          <span style="color:#f48fb1;">Solicita el servicio de recogida a domicilio las 24 horas vía WhatsApp o llamada.</span>
+        </li>
+        <li>¿Puedo ver el proceso de cremación? <br>
+          <span style="color:#f48fb1;">Sí, puedes asistir o recibir fotos del proceso si lo deseas.</span>
+        </li>
+      </ul>
+      <a class="cta" href="https://www.gob.mx/profeco/documentos/servicios-funerarios-para-mascotas?state=published" target="_blank">Información oficial PROFECO</a>
+    </section>
+    <section class="contacto" id="contacto">
+      <h2>Contacto</h2>
+      <p>WhatsApp: <a href="https://wa.me/5215512345678" target="_blank">5215512345678</a> <br>
+      Correo: <a href="mailto:contacto@crematoriomascotas.com.mx">contacto@crematoriomascotas.com.mx</a></p>
+      <div class="redes">
+        <a href="https://facebook.com/crematoriomascotasmx" target="_blank" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="https://instagram.com/crematoriomascotasmx" target="_blank" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+        <a href="https://wa.me/5215512345678" target="_blank" title="WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      </div>
+      <a class="cta" href="https://wa.me/5215512345678" target="_blank">Solicita información por WhatsApp</a>
+    </section>
   </div>
-
-  <script>
-    function enviarWhatsApp(event) {
-      event.preventDefault();
-      var nombre = document.getElementById('nombre').value;
-      var telefono = document.getElementById('teléfono').value;
-      var mensaje = document.getElementById('mensaje').value;
-      var numero = '5491136584970';
-      var texto = `Hola, soy ${nombre}, mi teléfono es ${telefono}. ${mensaje}`;
-      var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-      window.open(url, '_blank');
-    }
-  </script>
+  <footer>
+    &copy; 2025 Crematorios de Mascotas México | Inspirado por <a href="https://crematoriosdemascotas.com.mx/" target="_blank" style="color:#fff;text-decoration:underline;">crematoriosdemascotas.com.mx</a>, <a href="https://www.huellitasenelcielo.com.mx/" target="_blank" style="color:#fff;text-decoration:underline;">Huellitas en el Cielo</a> y <a href="https://siemprejuntoscrematorios.com/" target="_blank" style="color:#fff;text-decoration:underline;">Siempre Juntos</a>
+  </footer>
 </body>
 </html>
