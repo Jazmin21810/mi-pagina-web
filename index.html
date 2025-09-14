@@ -205,9 +205,8 @@
   <div class="box fade-in">
     <h2 id="galeria">Galería de Mascotas</h2>
     <div class="galeria">
-      <img src="mascota.jpg" alt="Mascota 1">
-      <img src="mascota2.jpg" alt="Mascota 2">
-      <img src="mascota3.jpg" alt="Mascota 3">
+      <img src="mascota.jpg" alt="Mascota 1.jpeg">
+      <img src="mascota2.jpg" alt="Mascota 2.png">
       <!-- Agrega más imágenes aquí -->
     </div>
   </div>
@@ -215,21 +214,21 @@
   <!-- Sección de Ubicación -->
   <div class="box fade-in">
     <h2 id="ubicacion">Ubicación</h2>
-    <p>Estamos ubicados en [tu dirección aquí].</p>
+    <p>Estamos ubicados en Alvarado 2700, Barracas, C.A.B.A.</p>
   </div>
 
   <!-- Sección de Contacto y Formulario WhatsApp -->
   <div class="box fade-in">
     <h2 id="contacto">Contacto</h2>
-    <p>Escríbenos a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a> o envíanos un mensaje por <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>.</p>
+    <p>Envíanos un mensaje por <a href="https://wa.me/5491136584970" target="_blank">WhatsApp</a>.</p>
 
     <h2 id="formulario">Formulario de Contacto</h2>
     <form id="whatsappForm" onsubmit="enviarWhatsApp(event)">
       <label>Nombre:<br>
         <input type="text" id="nombre" required>
       </label>
-      <label>Email:<br>
-        <input type="email" id="email" required>
+      <label>Teléfono:<br>
+        <input type="email" id="teléfono" required>
       </label>
       <label>Mensaje:<br>
         <textarea id="mensaje" rows="4" required></textarea>
@@ -242,9 +241,9 @@
     function enviarWhatsApp(event) {
       event.preventDefault();
       var nombre = document.getElementById('nombre').value;
-      var email = document.getElementById('email').value;
+      var teléfono = document.getElementById('email').value;
       var mensaje = document.getElementById('mensaje').value;
-      var numero = 'XXXXXXXXXX'; // <-- Cambia aquí tu número con código de país, ejemplo: 5215512345678
+      var numero = '5491136584970'; // <-- Cambia aquí tu número con código de país, ejemplo: 5215512345678
       var texto = `Hola, soy ${nombre}. Mi correo es ${email}. ${mensaje}`;
       var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
